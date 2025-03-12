@@ -24,5 +24,12 @@ RMSE for velocity: 0.1143
 ---
 Some side notes about Extended Kalman Filter scrited: 
 EKF assumes that there are 2 noises to be considered: Process Noise and Measurement Noise. Both of them are assumed to be: Gaussian (Normal) random processes. Meaning that the histogram of the data istribution is: a symmetric bell-curve. 
-As simle Kalman filter works only for LINEAR systems, Extended Kalmna Filter is adopted to linearize the system via the Jacobians.     
-
+As simle Kalman filter works only for LINEAR systems, Extended Kalmna Filter is adopted to linearize the system via the Jacobians.
+EKF design steps: 
+Q: process noise covariance - this is a metric that high values reveal that there is high uncertainty in the model we have. We have less trust or confidance in the model and willing to rely on the measured data more than model. 
+R: measurement noise covariance - this metric pertains to the measurement noise. If the measurement equipment (e.g., snesors or NI&Measurement) or measurement ambient are noisy, meaning low quality data is secured, then we rely on the model more than the measurement meaning that we trust the measurement low. In such a case high value of R is desired. 
+* It is not ideal to have both Q and R, greate values. (this means that neither model nor measurement, are not reliable/trustable). 
+P: Initial Error Covariance. 
+x_hat: Initial State Estimates 
+Basically Kalman Filter has 2 main steps inside the 'for' loop: Prediction and Update.         
+![image](https://github.com/user-attachments/assets/06f56c85-6e93-4d98-aed2-ccc33084baa2)
