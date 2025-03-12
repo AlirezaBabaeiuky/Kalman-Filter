@@ -4,7 +4,7 @@ EKF is designed in MATLB without using any built-in functions to estimate the sy
 It is important to note that KF (Kalman Filter) is a type of State Observer commonly used in modern control techniques. 
 It is decent to briefly recall the concepts in Controllability and Observability: 
 Controllability: a system is called controllable if it is possible to drive any state of the system to any desired state in a given finite time. 
-Oberveability: a system is called observable if it is possible to derive or infer internal states of a system from external measurements. 
+Oberveability: a system is called observable if it is possible to derive or infer internal states of a system from external DIRECT measurements. 
 If the system is controllable, you can theoretically find a State FeedBack Gain matrix that drives the Closed-Loop Location of the poles (eigen values of the State Matrix) to the desired location. 
 In most cases, a system is not fully observable (sensors like: encoders and accelerometers are pricy and expensive), or it is not feasible to locate the sensors at some locatoins. 
 In such cases, State Observers are of great importance to infer internal dynamics from external measurements. 
@@ -21,4 +21,8 @@ Scripting the Kalman Filter in MATLAB to estimate the position state of a nonlin
 The designed EKF has following RMSE as a decent metrics to assess its capability: 
 RMSE for position: 1.225e-9
 RMSE for velocity: 0.1143
+---
+Some side notes about Extended Kalman Filter scrited: 
+EKF assumes that there are 2 noises to be considered: Process Noise and Measurement Noise. Both of them are assumed to be: Gaussian (Normal) random processes. Meaning that the histogram of the data istribution is: a symmetric bell-curve. 
+As simle Kalman filter works only for LINEAR systems, Extended Kalmna Filter is adopted to linearize the system via the Jacobians.     
 
