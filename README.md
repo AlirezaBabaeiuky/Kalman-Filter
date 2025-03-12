@@ -33,3 +33,8 @@ P: Initial Error Covariance.
 x_hat: Initial State Estimates 
 Basically Kalman Filter has 2 main steps inside the 'for' loop: Prediction and Update.         
 ![image](https://github.com/user-attachments/assets/06f56c85-6e93-4d98-aed2-ccc33084baa2)
+Besides, following is a sort code snippet to calculate the Jacobian using 'jacobian' built-in function in MATLAB, but in the main code snippet we did not use this built-in function.
+![image](https://github.com/user-attachments/assets/d7ecd5fa-06b7-435e-8ef0-876dbd4fe485)
+
+
+
