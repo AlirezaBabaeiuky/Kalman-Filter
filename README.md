@@ -37,5 +37,6 @@ Besides, following is a sort code snippet to calculate the Jacobian using 'jacob
 
 ![image](https://github.com/user-attachments/assets/d7ecd5fa-06b7-435e-8ef0-876dbd4fe485)
 
-
+Side note: in Duality program which pertains to both: State Feedback Control (Gain Matrix) and State Observer (when the state are not fully and directly measureable); Pole-Placement or Quadratic Optimal Regulator can be chosen. Pole-Placement (PP) appraoch is similar to Root Locus; the difference is in Root Locus we design the compensator or contrller with respect to the DOMINANT Desired Closed-Loop Poles, meaning we have ONLY ONE Pair of Complex Conjugate poles which comes up from the specification or performanc erequirments (e.g., desired settling time / desired overshoot; which both lead to the desired damped natural frequency and attenuation term (damping ration and natural frequency)). But in PP approach, we target to loop-shape ALL of the Closed-Loop Poles (of course in low-order systems like 1st or 2nd-order, this is simple) which requires plenty of experience. Quadratic Optimal Regulator System (e.g., Linear Quadratic Optimization technique LQR/lqr) has a more industry applications with a mor esystematic appraohes. 
+   
 
